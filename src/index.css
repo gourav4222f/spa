@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --color-olive-950: #1b1c16;
+  --color-olive-900: #25271f;
+  --color-olive-800: #2f3127;
+  --color-olive-700: #424536;
+  --color-gold: #d6c29a;
+  --color-gold-soft: #e5d2a5;
+  --color-gold-light: #f3e8c8;
+  --color-ivory: #f8f5ec;
+  --color-stone: #d4d0c3;
+  --color-cream: #f4f0e6;
+  --color-cream-deep: #ebe4d4;
+  --color-ink: #25271f;
+  --color-ink-soft: #5a5c4c;
+
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-sans: "Manrope", "DM Sans", Inter, system-ui, sans-serif;
+
+  --ease-lux: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-olive-900 font-sans text-ivory antialiased;
+    font-feature-settings: "ss01";
+  }
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-olive-900);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+  }
+  img {
+    user-select: none;
+  }
+}
+
+@layer components {
+  .container-lux {
+    @apply mx-auto w-full max-w-[1320px] px-5 sm:px-8 lg:px-12;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-gold;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply block h-px w-8 bg-current opacity-70;
+  }
+  .heading-xl {
+    @apply font-serif font-light leading-[0.95] tracking-[-0.01em];
+  }
+  .heading-lg {
+    @apply font-serif text-4xl font-light leading-[1.05] sm:text-5xl lg:text-6xl;
+  }
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
