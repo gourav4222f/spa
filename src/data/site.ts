@@ -48,24 +48,25 @@ export const navLinks = [
   { id: 'contact', label: 'Contact' },
 ] as const
 
-export const img = (name: string) => ({
-  webp: `/images/${name}.webp`,
-  jpg: `/images/${name}.jpg`,
-})
+export const img = (name: string) => (name.startsWith('/')
+  ? { webp: '', jpg: name }
+  : {
+      webp: `/images/${name}.webp`,
+      jpg: `/images/${name}.jpg`,
+    })
 
 /* ---------------------------------- Team --------------------------------- */
 /**
- * PLACEHOLDER team members — replace names, roles and photos with your real team.
- * Drop new photos into /src-images and run `npm run images`, then reference the file name here.
+ * Team portraits are stored in /public/spa.
  * `focus` is the CSS object-position used to frame the face in the portrait card.
  */
 export const team = [
-  { name: 'Aaradhya', role: 'Wellness Therapist', image: 'towel-portrait', focus: '68% 30%' },
-  { name: 'Ishani', role: 'Spa Therapist', image: 'eye-ritual', focus: '28% 30%' },
-  { name: 'Kavya', role: 'Facial & Relaxation', image: 'facial-ritual', focus: '42% 45%' },
-  { name: 'Riya', role: 'Massage Therapist', image: 'relaxing-guest', focus: '55% 40%' },
-  { name: 'Naira', role: 'Aromatherapy', image: 'candle-massage', focus: '46% 45%' },
-  { name: 'Tara', role: 'Spa Host', image: 'body-massage', focus: '30% 50%' },
+  { name: 'Aaradhya', role: 'Wellness Therapist', image: '/spa/team-04.jpeg', focus: '68% 30%' },
+  { name: 'Ishani', role: 'Spa Therapist', image: '/spa/team-05.jpeg', focus: '28% 30%' },
+  { name: 'Kavya', role: 'Facial & Relaxation', image: '/spa/team-06.jpeg', focus: '42% 45%' },
+  { name: 'Riya', role: 'Massage Therapist', image: '/spa/team-08.jpeg', focus: '55% 40%' },
+  { name: 'Naira', role: 'Aromatherapy', image: '/spa/team-10.jpeg', focus: '46% 45%' },
+  { name: 'Tara', role: 'Spa Host', image: '/spa/team-11.jpeg', focus: '30% 50%' },
 ]
 
 /* -------------------------------- Services ------------------------------- */

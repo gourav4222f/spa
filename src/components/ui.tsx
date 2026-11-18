@@ -29,7 +29,7 @@ export function Picture({ name, alt, className, imgClassName, priority, style }:
   const src = img(name)
   return (
     <picture className={className}>
-      <source srcSet={src.webp} type="image/webp" />
+      {src.webp && <source srcSet={src.webp} type="image/webp" />}
       <img
         src={src.jpg}
         alt={alt}
