@@ -117,7 +117,7 @@ export default function Team() {
               <div className="absolute inset-x-0 bottom-0 p-6">
                 <p className="text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-gold">{m.role}</p>
                 <h3 className="mt-2 font-serif text-[2.1rem] font-light leading-none text-ivory">{m.name}</h3>
-                <div className="mt-3 flex gap-2 text-[0.68rem] font-semibold text-ivory">
+                <div className="mt-3 flex gap-2 text-sm font-semibold text-ivory sm:text-base">
                   <span className="rounded-full border border-gold/25 bg-olive-950/60 px-3 py-1.5">Short · {m.shortPrice}</span>
                   <span className="rounded-full border border-gold/25 bg-olive-950/60 px-3 py-1.5">Full Night · {m.nightPrice}</span>
                 </div>
