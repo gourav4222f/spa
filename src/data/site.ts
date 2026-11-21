@@ -61,12 +61,12 @@ export const img = (name: string) => (name.startsWith('/')
  * `focus` is the CSS object-position used to frame the face in the portrait card.
  */
 export const team = [
-  { name: 'Aaradhya', role: 'Wellness Therapist', image: '/spa/team-04.jpeg', focus: '68% 30%' },
-  { name: 'Ishani', role: 'Spa Therapist', image: '/spa/team-05.jpeg', focus: '28% 30%' },
-  { name: 'Kavya', role: 'Facial & Relaxation', image: '/spa/team-06.jpeg', focus: '42% 45%' },
-  { name: 'Riya', role: 'Massage Therapist', image: '/spa/team-08.jpeg', focus: '55% 40%' },
-  { name: 'Naira', role: 'Aromatherapy', image: '/spa/team-10.jpeg', focus: '46% 45%' },
-  { name: 'Tara', role: 'Spa Host', image: '/spa/team-11.jpeg', focus: '30% 50%' },
+  { name: 'Aaradhya', role: 'Wellness Therapist', image: '/spa/team-04.jpeg', focus: '68% 30%', shortPrice: '₹5k', nightPrice: '₹18k' },
+  { name: 'Ishani', role: 'Spa Therapist', image: '/spa/team-05.jpeg', focus: '28% 30%', shortPrice: '₹5k', nightPrice: '₹18k' },
+  { name: 'Kavya', role: 'Facial & Relaxation', image: '/spa/team-06.jpeg', focus: '42% 45%', shortPrice: '₹5k', nightPrice: '₹18k' },
+  { name: 'Riya', role: 'Massage Therapist', image: '/spa/team-08.jpeg', focus: '55% 40%', shortPrice: '₹5k', nightPrice: '₹18k' },
+  { name: 'Naira', role: 'Aromatherapy', image: '/spa/team-10.jpeg', focus: '46% 45%', shortPrice: '₹5k', nightPrice: '₹18k' },
+  { name: 'Tara', role: 'Spa Host', image: '/spa/team-11.jpeg', focus: '30% 50%', shortPrice: '₹5k', nightPrice: '₹18k' },
 ]
 
 /* -------------------------------- Services ------------------------------- */
